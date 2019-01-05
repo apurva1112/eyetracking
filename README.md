@@ -10,7 +10,12 @@ This code does live tracking of eye pupil and plays a siren if the eyes are clos
 
 # Requisites
 This code has been run and tested on following python libraries:
-1.dlib                   -  v19.15.0  2.imutils                -  v0.4.6  3.numpy                  -  v1.15.0  4.opencv-contrib-python  -  v3.4.2.17  5.pygame                 -  v1.9.4  6.scpiy                  -  v1.1.0
+1. dlib                   -  v19.15.0  
+2. imutils                -  v0.4.6  
+3. numpy                  -  v1.15.0  
+4. opencv-contrib-python  -  v3.4.2.17  
+5. pygame                 -  v1.9.4  
+6. scpiy                  -  v1.1.0
 
 # Documentation
 Inside the while loop, the webcam continuously captures images, the eye image processing is done and the required actions are carried out. The line "time.sleep(1.0)" ensures that a single image is captured in every 2 seconds. If this is not done, the white pupil locator on image will be unstable. The functions sound_alarm_on(path) and sound_alarm_off() are used to play and stop the alarm respectively when called.
