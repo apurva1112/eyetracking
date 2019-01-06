@@ -31,3 +31,5 @@ Then erosion is performed on the image using a 2X2 window to remove the small wh
 
 # Unit testing
 1. Unit testing of finding_pupil_centre(): Give an input image having a face to the code in the file "Unit testing of finding_pupil_centre().ipynb". It will output two images, right eye and left eye found on the face with their pupils located with a white dot.
+
+2. Unit testing of playing Alarm: Run the code in "Unit testing of Alarm playing code.ipynb". A screen will come showing your face. Close your eyes for 10-11 seconds. An alarm will be played alerting that your eyes are closed for some time. Open your eyes to stop the alarm.
