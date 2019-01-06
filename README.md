@@ -1,10 +1,3 @@
-# eyetracking
-upload eye-tracking code here
-
-1. You can download the dlib's pre trained shape detector from here: http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
-
-2.This code is the implementation of this paper: https://pdfs.semanticscholar.org/81d5/c4b49fe17aaa3af837745cafdedb066a067d.pdf
-
 # Description
 This code does live tracking of eye pupil and plays a siren if the eyes are closed.
 
@@ -16,6 +9,10 @@ This code has been run and tested on following python libraries:
 4. opencv-contrib-python  -  v3.4.2.17  
 5. pygame                 -  v1.9.4  
 6. scpiy                  -  v1.1.0
+
+1. You can download the dlib's pre trained shape detector from here: http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+
+2. This code is somewhat implementation of this paper: https://pdfs.semanticscholar.org/81d5/c4b49fe17aaa3af837745cafdedb066a067d.pdf
 
 # Documentation
 Inside the while loop, the webcam continuously captures images, the eye image processing is done and the required actions are carried out. The line "time.sleep(1.0)" ensures that a single image is captured in every 2 seconds. If this is not done, the white pupil locator on image will be unstable. The functions sound_alarm_on(path) and sound_alarm_off() are used to play and stop the alarm respectively when called.
@@ -31,3 +28,6 @@ Inside the function finding_pupil_centre(right_eye, ear), we first perform Histo
 NOTE: In the nested for loop in which we perform the binarization of image, the ranges used are (0, equ.shape[0]-5) and (0, equ.shape[1]-5). This is done to neglect the pixels belonging to eye-brows.
 
 Then erosion is performed on the image using a 2X2 window to remove the small white noises and is stored in new_img_er1. Now even after this, it is possible that there will be more than one white blob in the image. To select the pupil, we choose that blob shape which has the largest area. This is done using findContours function of opencv. We find contours of various blobs in the image, find the blob having largest area and find the moments of that blob using moments function of opencv. The coordinates of the centre is calculated using those moments and stored in (cX, cY).  This centre is our approximation to the pupil centre. At this point, a small white circle is made on the original eye image to show the pupil centre. If ear<0.2 (i.e. eye is closed), (cX,cY) store (0,0). 
+
+# Unit testing
+1. Unit testing of finding_pupil_centre(): Give an input image having a face to the code in the file "Unit testing of finding_pupil_centre().ipynb". It will output two images, right eye and left eye found on the face with their pupils located with a white dot.
