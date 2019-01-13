@@ -1,6 +1,9 @@
 # Description
 This code does live tracking of eye pupil and plays a siren if the eyes are closed.
 
+# Main code
+Run the code in "Live pupil detection (Using Webcam) ver 5.0_final.ipynb".
+
 # Requisites
 This code has been run and tested on following python libraries:
 1. dlib                   -  v19.15.0  
@@ -37,3 +40,11 @@ Then erosion is performed on the image using a 2X2 window to remove the small wh
 1. Unit testing of finding_pupil_centre(): Give an input image having a face to the code in the file "Unit testing of finding_pupil_centre().ipynb". It will output two images, right eye and left eye found on the face with their pupils located with a white dot.
 
 2. Unit testing of playing Alarm: Run the code in "Unit testing of Alarm playing code.ipynb". A screen will come showing your face. Close your eyes for 10-11 seconds. An alarm will be played alerting that your eyes are closed for some time. Open your eyes to stop the alarm.
+
+# Limitations
+Following are the limitations found in the code till now:
+1. The code heavily depends on dlib's face detection capability. While testing in dark conditions, dlib was not able to perfectly capture the complete face of some users.
+2. When the code doesn't detect the face of a user completely, it iterates over the same eye images and gives output with more than one white dots until a new and complete eye image is detected.
+
+# Tested datasets
+The code was tested on three users in three lighting conditions, which were daylight, light source from above (evening) and a single light source in a dark room. The three datasets with their resulting output images are uploaded in three zip files.
