@@ -15,6 +15,7 @@ You can download the dlib's pre trained shape detector from here: http://dlib.ne
 This code is somewhat combined implementation of these paper: https://pdfs.semanticscholar.org/81d5/c4b49fe17aaa3af837745cafdedb066a067d.pdf
 https://ieeexplore.ieee.org/document/6869552
 https://ieeexplore.ieee.org/document/7492591
+https://www.researchgate.net/publication/221667667_Eye_Pupil_Location_Using_Webcam
 
 # Documentation
 Inside the while loop, the webcam continuously captures images, the eye image processing is done and the required actions are carried out. The line "time.sleep(1.0)" ensures that a single image is captured in every 2 seconds. If this is not done, the white pupil locator on image will be unstable. The functions sound_alarm_on(path) and sound_alarm_off() are used to play and stop the alarm respectively when called.
