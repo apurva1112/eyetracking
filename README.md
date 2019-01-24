@@ -6,17 +6,15 @@ Run the code in "Live pupil detection (Using Webcam) ver 5.0_final.ipynb".
 
 # Requisites
 This code has been run and tested on following python libraries:
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-1. dlib                   -  v19.15.0  
-2. imutils                -  v0.4.6  
-3. numpy                  -  v1.15.0  
-4. opencv-contrib-python  -  v3.4.2.17  
-5. pygame                 -  v1.9.4  
-6. scpiy                  -  v1.1.0
+
+| Module                | Version       |
+|:---------------------:|:-------------:|
+| dlib                  | v19.15.0      |
+| imutils               | v0.4.6        |
+| numpy                 | v1.15.0       |
+| opencv-contrib-python | v3.4.2.17     |
+| pygame                | v1.9.4        |
+| scipy                 | v1.1.0        |
 
 You can download the dlib's pre trained shape detector from here: http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 
