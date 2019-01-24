@@ -6,6 +6,11 @@ Run the code in "Live pupil detection (Using Webcam) ver 5.0_final.ipynb".
 
 # Requisites
 This code has been run and tested on following python libraries:
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 1. dlib                   -  v19.15.0  
 2. imutils                -  v0.4.6  
 3. numpy                  -  v1.15.0  
